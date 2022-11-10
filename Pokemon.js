@@ -52,12 +52,15 @@ async function getPokemonSize(name,id) {
     return data;
 }
 
-for (let i = 0; i < args.length; i++) {
-    getPokemon(args[i]);
 
-
+async function main() {
+    for (let i = 0; i < args.length; i++) {
+        await getPokemon(args[i]);
+    }
 }
 
+
+main();
 
 
 
